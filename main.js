@@ -31,10 +31,10 @@ const backgroundLoop = () => {
         oldImage.addEventListener("animationend", () => {
             oldImage.parentNode.removeChild(oldImage);
         });
-        oldImage.style.animation = "decreaseOpacity 3s linear forwards";
+        oldImage.style.animation = "decreaseOpacity 5s linear forwards";
         setImage();
         let newImage = document.querySelector(".image-container img:last-child");
-        newImage.style.animation = "increaseOpacity 3s linear forwards";
+        newImage.style.animation = "increaseOpacity 5s linear forwards";
     };
 };
 
@@ -46,7 +46,7 @@ const onLoadBackground = () => {
 
 onLoadBackground();
 
-backgroundInterval = setInterval(backgroundLoop, 5000);
+backgroundInterval = setInterval(backgroundLoop, 10000);
 
 // Slides show
 const dogButton = document.querySelector(".dog-button");
@@ -145,10 +145,10 @@ dogButton.addEventListener("click", () => {
         if(hasChilds == false) {
             continueInterval = 1
             startImage();
-            dogInterval = setInterval(changeImage, 5000);   
+            dogInterval = setInterval(changeImage, 4000);   
         } else if (continueInterval == 1) {
             changeImage();
-            dogInterval = setInterval(changeImage, 5000);
+            dogInterval = setInterval(changeImage, 4000);
         };
     } else if (dogMarker == "to-stop") {
         dogMarker = "to-start";
