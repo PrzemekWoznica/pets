@@ -191,9 +191,14 @@
         letter-spacing: 5px;
         text-shadow: 0 0 5px black;
     }
+    .slides{
+        height: 60vh;
+    }
     .slides .images{
-        top: 0;
-        left: 0;
+        display: flex;
+        position: initial;
+        justify-content: center;
+        align-items: center;
         min-width: 100%;
         min-height: 100%;
         transform: translateX(0);
