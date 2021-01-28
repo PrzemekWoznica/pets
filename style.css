@@ -1,0 +1,219 @@
+/* Background animations <-START->*/
+@-webkit-keyframes decreaseOpacity{
+    from{
+        opacity: 1.0;
+    }
+    to{
+        opacity: 0.0;
+    }
+}
+@-webkit-keyframes increaseOpacity{
+    from{
+        opacity: 0.0;
+    }
+    to{
+        opacity: 1.0;
+    }
+}
+@-moz-keyframes decreaseOpacity{
+    from{
+        opacity: 1.0;
+    }
+    to{
+        opacity: 0.0;
+    }
+}
+@-moz-keyframes increaseOpacity{
+    from{
+        opacity: 0.0;
+    }
+    to{
+        opacity: 1.0;
+    }
+}
+@keyframes decreaseOpacity{
+    from{
+        opacity: 1.0;
+    }
+    to{
+        opacity: 0.0;
+    }
+}
+@keyframes increaseOpacity{
+    from{
+        opacity: 0.0;
+    }
+    to{
+        opacity: 1.0;
+    }
+}
+/* Background animations <-END->*/
+/* Background <-START->*/
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+.image-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.image-container img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1.0;
+}
+/* Background <-END->*/
+.flex-container{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+/* Header <-START->*/
+.header{
+    min-height: 20vh;
+    background: radial-gradient(circle, rgba(9,255,0,1) 0%, rgba(83,119,126,1) 100%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    z-index: 2;
+
+}
+.header i, .header h1{
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 10px;
+    text-shadow: 0 0 10px black;
+}
+.header h1{
+    margin-left: 2rem;
+}
+/* Header <-END->*/
+/* Slides <-START->*/
+.slides{
+    position: relative;
+    z-index: 1;
+    height: 80vh;
+}
+.slides .images{
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    min-width: 55%;
+    min-height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+
+}
+.images img{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+/* Slides <-END->*/
+/* Buttons <-START->*/
+.chooses{
+    position: absolute;
+    top: 94%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 40%;
+    height: 20%;
+    border: 10px solid #FFFFFF;
+    border-radius: 20%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    z-index: 2;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    transition: 0.3s linear;
+    background: rgba(0, 0, 0, 0.7);
+    
+}
+.chooses:hover{
+    background: radial-gradient(circle, rgba(9,255,0,1) 0%, rgba(83,119,126,1) 100%);
+    top: 80%;
+}
+.dog-button, .cat-button{
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-transition: transform 0.5s ease-in-out; 
+    -moz-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+.dog-button{
+    margin-right: 2rem;
+}
+.chooses div i{
+    color: white;
+    font-size: 2rem;
+}
+.dog-button:hover, .cat-button:hover{
+    color: #FF756B;
+    border-color: #FF756B;
+    box-shadow: 0 0 15px black;
+    -webkit-transform: rotateZ(360deg) scale(1.5);
+    -moz-transform: rotateZ(360deg) scale(1.5);
+    transform: rotateZ(360deg) scale(1.5);
+}
+.chooses div:active{
+    color: rgba(161, 161, 161, 0.6);
+    border-color: rgb(161, 161, 161);
+    background: rgba(0, 0, 0, 0.6);
+}
+/* Buttons <-END->*/
+/* Media queries <-START-> */
+@media screen and (max-width: 767px){
+    .header{
+        clip-path: none;
+    }
+    .header i, .header h1{
+        font-size: 30px;
+        color: white;
+        letter-spacing: 5px;
+        text-shadow: 0 0 5px black;
+    }
+    .slides .images{
+        top: 0;
+        min-width: 100%;
+        min-height: 75%;
+    }
+    .chooses{
+        width: 100%;
+        flex-grow: 1;
+        border: none;
+        border-radius: 0;
+        top: 80%;
+        background: radial-gradient(circle, rgba(9,255,0,1) 0%, rgba(83,119,126,1) 100%);
+    }
+    .dog-button{
+        margin-right: 3rem;
+    }
+}
+/* Media queries <-END-> */
