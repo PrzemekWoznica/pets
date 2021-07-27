@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <title>Paws & Pussies</title>
+    <title>Paws</title>
 </head>
 <body>
     <div class="container">
@@ -27,9 +27,9 @@
             <div class="dog-button">
                 <i class="fas fa-dog"></i>
             </div>
-            <div class="cat-button">
+            <!-- <div class="cat-button">
                 <i class="fas fa-cat"></i>
-            </div>
+            </div> -->
         </div>
     </div>
 
