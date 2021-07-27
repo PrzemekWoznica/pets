@@ -27,9 +27,9 @@
             <div class="dog-button">
                 <i class="fas fa-dog"></i>
             </div>
-            <!-- <div class="cat-button">
+            <div class="cat-button">
                 <i class="fas fa-cat"></i>
-            </div> -->
+            </div>
         </div>
     </div>
 
