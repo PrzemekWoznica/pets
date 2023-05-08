@@ -7,9 +7,6 @@ const setImage = (url) => {
 const getImage = () => {
     const request = new XMLHttpRequest();
     request.addEventListener("load", () => {
-        console.log(request.response.url);
-        console.log(slide);
-        
         setImage(request.response.url);
     });
     
